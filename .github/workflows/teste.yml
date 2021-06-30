@@ -15,17 +15,17 @@ jobs:
         with:
           python-version: 3.9
       - name: Install dependencies
-          run: |
+        run: |
             pip install pipenv
             pipenv sync --dev
       - name: Lint with flake8 .
-          run: |
+        run: |
             pipenv run flake8
       - name: Test with pytest
-          run: |
+        run: |
             pipenv run pytest pythonpro --cov=pythonpro
       - name: Posting Coverage
-          env:
+        env:
             CODECOV_TOKEN: "50faf457-93d1-49ea-8437-127b6841d312"
-          run: |
+        run: |
             pipenv run codecov
