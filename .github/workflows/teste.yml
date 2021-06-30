@@ -1,7 +1,8 @@
 name: curso_django
-  on: [ pull_request ]
 
-  jobs:
+on: [ pull_request ]
+
+jobs:
     build:
       env:
         PIPENV_NO_INHERIT: 1
