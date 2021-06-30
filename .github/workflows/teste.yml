@@ -1,0 +1,30 @@
+name: curso_django
+  on: [ pull_request ]
+
+  jobs:
+    build:
+      env:
+        PIPENV_NO_INHERIT: 1
+        PIPENV_IGNORE_VIRTUALENVS: 1
+      runs-on: windows
+      steps:
+        - uses: actions/checkout@v2
+        - name: Set up Python 3.9
+          uses: actions/setup-python@v1
+          with:
+            python-version: 3.9
+        - name: Install dependencies
+            run: |
+              pip install pipenv
+              pipenv sync --dev
+        - name: Lint with flake8
+            run: |
+              pipenv run flake8 .
+        - name: Test with pytest
+            run: |
+              pipenv run pytest pythonpro --cov=pythonpro
+        - name: Posting Coverage
+            env:
+              CODECOV_TOKEN: "50faf457-93d1-49ea-8437-127b6841d312"
+            run: |
+                pipenv run codecov
