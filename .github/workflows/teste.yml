@@ -7,7 +7,7 @@ jobs:
     env:
       PIPENV_NO_INHERIT: 1
       PIPENV_IGNORE_VIRTUALENVS: 1
-    runs-on: windows
+    runs-on: windows 10
     steps:
       - uses: actions/checkout@v2
       - name: Set up Python 3.9
