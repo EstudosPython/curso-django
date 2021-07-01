@@ -1,7 +1,7 @@
 # curso-django
 
 
-
+Aplicação disponivel em: https://cursod.herokuapp.com/
 
 [![Build Status](https://www.travis-ci.com/EstudosPython/curso-django.svg?branch=main)](https://www.travis-ci.com/EstudosPython/curso-django)
 [![codecov](https://codecov.io/gh/EstudosPython/curso-django/branch/main/graph/badge.svg?token=IL6YIIZHX6)](https://codecov.io/gh/EstudosPython/curso-django)
